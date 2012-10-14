@@ -2,14 +2,19 @@
   "description": "Modulus command line tool - doesn't work atm",
   "version": "0.0.0",
   "dependencies": {
-    "commander": "1.0.x",
+    "commander-plus": "0.0.x",
     "colors" : "0.6.x",
     "prompt" : "0.2.x",
     "async" : "0.1.x",
-    "pkginfo" : "0.2.x"
+    "pkginfo" : "0.2.x",
+    "walkr" : "0.0.x",
+    "zipstream" : "0.2.x"
   },
   "devDependencies": {
-    "vows": "0.6.x"
+    "mocha": "1.5.x"
+  },
+  "bin" : {
+    "modulus": "./bin/modulus"
   },
   "name": "modulus"
 }
