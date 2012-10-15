@@ -11,7 +11,8 @@
     "zipstream" : "0.2.x"
   },
   "devDependencies": {
-    "mocha": "1.5.x"
+    "mocha" : "1.5.x",
+    "express" : "3.0.x"
   },
   "bin" : {
     "modulus": "./bin/modulus"
