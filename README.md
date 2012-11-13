@@ -6,7 +6,7 @@
   \/_/  \/_/ \/_____/ \/____/  \/_____/ \/_____/ \/_____/ \/_____/
 </pre>
       
-This is the offical command line tool for <a href="https://modulus.io/" target="_blank">Modulus.io</a>. Use it to create and manage you Modulus.io projects. For more detailed descriptions of commands available, check out <a href="https://modulus.io/codex/cli/reference" target="_blank">the Modulus codex</a>.
+This is the offical command line tool for <a href="https://modulus.io/" target="_blank">Modulus.io</a>. Use it to create and manage your Modulus.io projects. For more detailed descriptions of commands available, check out <a href="https://modulus.io/codex/cli/reference" target="_blank">the Modulus codex</a>.
 
 ##Installing
 To install the Modulus CLI, simply NPM install it globally.
@@ -62,7 +62,7 @@ When you first create an account it is in a “beta locked” state. This means 
 
 ##Project Management
 
-Once unlocked, you are finally ready to create a project. This is done with the *project create* command, and all that is required is a name.
+Once unlocked, you are ready to create a project. This is done with the *project create* command, and all that is required is a name.
 
     $ modulus project create
     Welcome to Modulus
@@ -72,6 +72,7 @@ Once unlocked, you are finally ready to create a project. This is done with the 
 
 To deploy an application to your new project, you can use either the *project deploy* command or its shorter sidekick, *deploy*. This command will take all the contents of your current directory, zip them up and deploy them. Once the deploy has started, the progress will be displayed. When the deploy completes, you have a running application on Modulus. You can redeploy a new version of the project at any time using the same process.
 
+    $ cd my/project/directory
     $ modulus deploy
     Welcome to Modulus
     You are logged in as spiderman
@@ -95,7 +96,7 @@ The CLI also provides an easy way to manage a project’s environment variables.
     Project Lizard Locator Environment Variables
     NODE_ENV = production
 
-To add a new variable, use the *env set* command. It takes two parameters, name and value. This command can also be used to change the value of a current variable.
+To add a new variable, use the *env set* command. It takes two parameters, name and value. This command can also be used to change the value of an existing variable.
 
     $ modulus env set DB_AUTH 12345
     Welcome to Modulus
