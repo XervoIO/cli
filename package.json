@@ -20,5 +20,6 @@
   "bin" : {
     "modulus": "./bin/modulus.js"
   },
-  "name": "modulus"
+  "name": "modulus",
+  "preferGlobal" : true
 }
