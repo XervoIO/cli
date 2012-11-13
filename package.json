@@ -1,6 +1,34 @@
 {
-  "description": "Modulus command line tool",
+  "name": "modulus",
+  "description": "All the awesomeness of Modulus.io in a CLI.",
+  "keywords": [
+    "cli",
+    "modulus",
+    "hosting",
+    "cloud hosting",
+    "paas",
+    "platform-as-a-service",
+    "deployment",
+    "deploy",
+    "command line",
+    "modulusio"
+  ],
   "version": "0.0.1",
+  "author": "Modulus <feedback@modulus.io>",
+  "maintainers": [
+    "zwigby <ckey@paranoidferret.com>",
+    "busyrich <richard@modulus.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onmodulus/modulus-cli.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/onmodulus/modulus-cli/blob/master/LICENSE-MIT"
+    }
+  ],
   "dependencies": {
     "commander-plus": "0.0.x",
     "colors" : "0.6.x",
@@ -11,15 +39,19 @@
     "zipstream" : "0.2.x",
     "request" : "2.11.x",
     "node-uuid" : "1.3.3",
-    "progress" : "0.1.x"
+    "progress" : "0.1.x",
+    "underscore" : "1.4.x"
   },
   "devDependencies": {
     "mocha" : "1.5.x",
     "express" : "3.0.x"
   },
+  "main": "./lib/modulus",
   "bin" : {
-    "modulus": "./bin/modulus.js"
+    "modulus": "./bin/modulus"
   },
-  "name": "modulus",
-  "preferGlobal" : true
+  "preferGlobal" : true,
+  "engines": {
+    "node": ">= 0.6.0"
+  }
 }
