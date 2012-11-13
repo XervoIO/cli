@@ -1,6 +1,6 @@
 {
   "name": "modulus",
-  "description": "All the awesomeness of Modulus.io in a CLI.",
+  "description": "The command line interface for deploying applications to the Modulus hosting platform.",
   "keywords": [
     "cli",
     "modulus",
