@@ -6,12 +6,20 @@
   \/_/  \/_/ \/_____/ \/____/  \/_____/ \/_____/ \/_____/ \/_____/
 </pre>
       
-This is the offical command line tool for <a href="https://modulus.io/" target="_blank">Modulus.io</a>. Use it to create and manage you Modulus.io projects. 
+This is the offical command line tool for <a href="https://modulus.io/" target="_blank">Modulus.io</a>. Use it to create and manage you Modulus.io projects. For more detailed descriptions of commands available, check out <a href="https://modulus.io/codex/cli/reference" target="_blank">the Modulus codex</a>.
 
 ##Installing
-To install the Modulus CLI, simple NPM install it globally.
+To install the Modulus CLI, simply NPM install it globally.
 
     $ npm install -g modulus
+
+##Usage
+
+Using the CLI is easy.
+
+<pre>
+Usage: modulus &lt;command&gt; &lt;param1&gt; &lt;param2&gt;
+</pre>
 
 At any point you can run the *help* command to get a full list of commands and how to use them.
 
