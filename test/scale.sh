@@ -1,9 +1,6 @@
 #!/bin/bash
 
 ITERATIONS=100
-USERNAME=brandon@modulus.io
-PASSWORD=qwerty
-MOD=0
 
 expect login.exp
 
