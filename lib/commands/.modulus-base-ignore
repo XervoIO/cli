@@ -1,0 +1,7 @@
+.git/
+.modulus-base-ignore
+.modulusignore
+node_modules
+modulus-auto-zip-*
+__MACOSX/
+.DS_Store
