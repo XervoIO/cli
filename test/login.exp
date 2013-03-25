@@ -15,3 +15,7 @@ expect {
 expect {
   "password:" {send "$PASSWORD\r"}
 }
+
+expect {
+  "brandon@modulus.io" {send "\r"}
+}

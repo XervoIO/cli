@@ -1,0 +1,156 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+input[type="text"] {
+  -webkit-appearance: none;
+}
+::-webkit-input-placeholder {
+   color: #888;
+}
+input:-moz-placeholder {
+   color: #888;
+}
+
+/* Site */
+body {
+  background: #737373 url('/img/body_bg.png') center top repeat-y;
+  font-family: Futura, "Century Gothic", AppleGothic, sans-serif;
+  line-height: 24px;
+  font-size: 18px;
+  color: #3b3b3b;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+#main {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#header {
+  height: 114px;
+}
+
+#content {
+  padding: 20px 0;
+}
+
+.col-1 {
+  float: left;
+  width: 230px;
+  padding-left: 20px;
+}
+
+.col-2 {
+  float: right;
+  width: 670px;
+  padding: 0 20px;
+}
+
+.bm {
+  margin-bottom: 20px;
+}
+
+.bbm {
+  margin-bottom: 40px;
+}
+
+.main-map {
+  height: 229px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.location-choice {
+  margin-bottom: 20px;
+  height: 195px;
+  overflow: hidden;
+}
+
+.location-choice a {
+  width: 635px;
+  height: 195px;
+  display: block;
+  text-indent: -9999px;
+}
+
+.location-choice a.cincy {
+  background: url('/img/cincy_location.png') no-repeat;
+}
+
+.location-choice a.cincy:hover {
+  background: url('/img/cincy_location_hover.png') no-repeat;
+}
+
+.location-choice a.stlouis {
+  background: url('/img/stlouis_location.png') no-repeat;
+}
+
+.location-choice a.stlouis:hover {
+  background: url('/img/stlouis_location_hover.png') no-repeat;
+}
+
+.location-choice a.wichita {
+  background: url('/img/wichita_location.png') no-repeat;
+}
+
+.location-choice a.wichita:hover {
+  background: url('/img/wichita_location_hover.png') no-repeat;
+}
+
+.location-choice a.albuquerque {
+  background: url('/img/albuquerque_location.png') no-repeat;
+}
+
+.location-choice a.albuquerque:hover {
+  background: url('/img/albuquerque_location_hover.png') no-repeat;
+}

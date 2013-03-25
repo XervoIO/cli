@@ -1,0 +1,10 @@
+{
+  "name": "modulus-demo-app",
+  "private" : true,
+  "version": "0.0.1",
+  "description": "Demo application for showing off Modulus.",
+  "dependencies" : {
+    "express" : "2.5.x",
+    "ejs" : "0.8.x"
+  }
+}
