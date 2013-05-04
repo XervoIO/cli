@@ -32,28 +32,28 @@
   ],
   "dependencies": {
     "commander-plus": "0.0.x",
-    "colors" : "0.6.x",
-    "prompt" : "0.2.x",
-    "async" : "0.1.x",
-    "pkginfo" : "0.2.x",
-    "walkr" : "0.0.x",
-    "archiver" : "0.4.x",
-    "request" : "2.12.0",
-    "node-uuid" : "1.3.3",
-    "progress" : "0.1.x",
-    "underscore" : "1.4.x",
-    "chunk-loader" : "0.1.0",
-    "fstream-ignore" :  "0.0.x"
+    "colors": "0.6.x",
+    "prompt": "0.2.x",
+    "async": "0.1.x",
+    "pkginfo": "0.2.x",
+    "walkr": "0.0.x",
+    "archiver": "0.4.x",
+    "request": "~2.12.0",
+    "node-uuid": "1.3.3",
+    "progress": "0.1.x",
+    "underscore": "1.4.x",
+    "chunk-loader": "0.1.0",
+    "fstream-ignore": "0.0.x"
   },
   "devDependencies": {
-    "mocha" : "1.5.x",
-    "express" : "3.0.x"
+    "mocha": "1.5.x",
+    "express": "3.0.x"
   },
   "main": "./lib/modulus",
-  "bin" : {
+  "bin": {
     "modulus": "./bin/modulus"
   },
-  "preferGlobal" : true,
+  "preferGlobal": true,
   "engines": {
     "node": ">= 0.8.0"
   }
