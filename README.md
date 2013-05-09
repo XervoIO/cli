@@ -44,7 +44,7 @@ To start, you may need an account. Using the *signup* command, you can quickly c
 
     You should receive an email at parker@example.com with more information.
 
-Once you have an account, you need to log in. Running the *login* command will prompt you for your credentials, then keep a session open so you can run commands under your account in the future. This session will never be closed unless you run the logout command.
+Once you have an account, you need to log in. Running the *login* command will prompt you for your Modulus credentials or link your GitHub account in the web portal (under account settings) and add the *--github* flag to login using your GitHub credentials. This keeps a session open so you can run commands under your account and the session will not be closed unless you run the logout command.
 
     $ modulus login
     Welcome to Modulus
