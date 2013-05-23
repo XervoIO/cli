@@ -6,22 +6,14 @@ var fs =  require('fs')
   , request = require('request')
   , path = require('path');
 
-var options = {
-  host: 'http://testversion-7791.onmodulus.net/',
-  method: 'GET'
-};
-
-var exec = require('child_process').exec, child, json, cmd, versions = [];
-var async = require('async'); // https://github.com/caolan/async
-
+var exec = require('child_process').exec, json, = [];
+var async = require('async');
 var versions = [];
-
 var index = -1;
 
 //-----------------------------------------------------------------------------
 var run = function() {
 
-  // https://github.com/caolan/async/#whilsttest-fn-callback
   async.whilst(
     function() {
       index++;
@@ -30,7 +22,6 @@ var run = function() {
     },
     function(callback) {
 
-      // https://github.com/caolan/async/#seriestasks-callback
       async.series([
 
         // Update package.json file.
@@ -62,31 +53,21 @@ var run = function() {
 
 //-----------------------------------------------------------------------------
 var updatePackageJSON = function(version, callback) {
-  // Update test-app/package.json with supplied version.
   json = JSON.parse(fs.readFileSync('testApp/package.json', 'utf8'));
   console.log('version node:\n', json.engines.node);
   console.log('need to change version to: ', version);
   json.engines.node = version;
-  //console.log('json.engines.node = ', JSON.stringify(json.version));
   fs.writeFileSync('testApp/package.json', JSON.stringify(json), 'utf8');
-  //console.log('json : \n', json);
-  // When done, invoke callback.
   callback();
 };
 
 //-----------------------------------------------------------------------------
 var deploy = function(callback) {
-  // Use expect script to control modulus CLI.
-  // Invoke modulus deploy test-app
   var dir = path.resolve(__dirname, 'testApp')
     , run = path.resolve(__dirname, '..', '..', 'lib') + '\\modulus.js';
   console.log(dir);
-  //node %s project deploy %s -p "versiontest"
   exec(util.format('modulus project deploy C:\\Users\\Erin\\fulcrum\\test\\versiontest\\testApp -p "versiontest"', run, dir), function(err, stdout, stderr){
-  //console.log('json after deploy: \n', JSON.parse(fs.readFileSync('testApp/package.json', 'utf8')));
   console.log(stdout);
-  //console.log('stderr', stderr);
-    // When deploy is done, invoke callback
        callback();
   });
 
@@ -94,15 +75,7 @@ var deploy = function(callback) {
 
 //-----------------------------------------------------------------------------
 var checkVersion = function(version, callback) {
-  // Every modulus project has a unique url. [something].onmodulus.net
-  // When you create the project and deploy to it the first time, you'll get this url.
-  // The creation/initial deploy can all be done through the web interface
-
-  // https://github.com/mikeal/request
-  // Use the request module to make a web request to the modulus test app.
-  // The app should simply return process.version it it's response.
   console.log('waiting for response\n');
-   // TODO: comes from deployed test app.
  var data = '';
 //http://testversion-7791.onmodulus.net/'
 http.get('http://versiontest-100017.xammr.com/', function(res) {
@@ -110,7 +83,6 @@ http.get('http://versiontest-100017.xammr.com/', function(res) {
     data += chunk;
   });
   res.on('end', function() {
-    //console.log('version:', data);
     version = 'v'+version;
        if(data !== version) {
       return callback('Versions do not match. Expected: ' + version + ' actual: ' + data);
@@ -128,29 +100,29 @@ var go = function() {
 
   // Get all versions of node.
   versions = [
-  // '0.6.0'
-  // , '0.6.1'
-  // , '0.6.2'
-  // , '0.6.3'
-  // , '0.6.4'
-  // , '0.6.5'
-  // , '0.6.6'
-  // , '0.6.7'
-  // , '0.6.8'
-  // , '0.6.9'
-  // , '0.6.10'
-  // , '0.6.11'
-  // , '0.6.12'
-  // , '0.6.13'
-  // , '0.6.14'
-  // , '0.6.15'
-  // , '0.6.16'
-  // , '0.6.17'
-  // , '0.6.18'
-  // , '0.6.19'
-  // , '0.6.20'
-  // , '0.6.21',
-   '0.7.0'
+  '0.6.0'
+  , '0.6.1'
+  , '0.6.2'
+  , '0.6.3'
+  , '0.6.4'
+  , '0.6.5'
+  , '0.6.6'
+  , '0.6.7'
+  , '0.6.8'
+  , '0.6.9'
+  , '0.6.10'
+  , '0.6.11'
+  , '0.6.12'
+  , '0.6.13'
+  , '0.6.14'
+  , '0.6.15'
+  , '0.6.16'
+  , '0.6.17'
+  , '0.6.18'
+  , '0.6.19'
+  , '0.6.20'
+  , '0.6.21'
+  , '0.7.0'
   , '0.7.1'
   , '0.7.2'
   , '0.7.3'
@@ -169,46 +141,46 @@ var go = function() {
   , '0.8.3'
   , '0.8.4'
   , '0.8.5'
-  // , '0.8.6'
-  // , '0.8.7'
-  // , '0.8.8'
-  // , '0.8.9'
-  // , '0.8.10'
-  // , '0.8.11'
-  // , '0.8.12'
-  // , '0.8.13'
-  // , '0.8.14'
-  // , '0.8.15'
-  // , '0.8.16'
-  // , '0.8.17'
-  // , '0.8.18'
-  // , '0.8.19'
-  // , '0.8.20'
-  // , '0.8.21'
-  // , '0.8.22'
-  // , '0.8.23'
-  // , '0.9.0'
-  // , '0.9.1'
-  // , '0.9.2'
-  // , '0.9.3'
-  // , '0.9.4'
-  // , '0.9.5'
-  // , '0.9.6'
-  // , '0.9.7'
-  // , '0.9.8'
-  // , '0.9.10'
-  // , '0.9.12'
-  // , '0.10.0'
-  // , '0.10.1'
-  // , '0.10.2'
-  // , '0.10.3'
-  // , '0.10.4'
-  // , '0.10.5'
-  // , '0.10.6'
-  // , '0.10.7'
-  // , '0.11.0'
-  // , '0.11.1'
-  // , '0.11.2'
+  , '0.8.6'
+  , '0.8.7'
+  , '0.8.8'
+  , '0.8.9'
+  , '0.8.10'
+  , '0.8.11'
+  , '0.8.12'
+  , '0.8.13'
+  , '0.8.14'
+  , '0.8.15'
+  , '0.8.16'
+  , '0.8.17'
+  , '0.8.18'
+  , '0.8.19'
+  , '0.8.20'
+  , '0.8.21'
+  , '0.8.22'
+  , '0.8.23'
+  , '0.9.0'
+  , '0.9.1'
+  , '0.9.2'
+  , '0.9.3'
+  , '0.9.4'
+  , '0.9.5'
+  , '0.9.6'
+  , '0.9.7'
+  , '0.9.8'
+  , '0.9.10'
+  , '0.9.12'
+  , '0.10.0'
+  , '0.10.1'
+  , '0.10.2'
+  , '0.10.3'
+  , '0.10.4'
+  , '0.10.5'
+  , '0.10.6'
+  , '0.10.7'
+  , '0.11.0'
+  , '0.11.1'
+  , '0.11.2'
   ];
 
   // Use nave, or just hard-code them here, whatever.
