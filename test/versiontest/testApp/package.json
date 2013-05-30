@@ -1,0 +1,1 @@
+{"name":"testApp","version":"0.6.0","description":"ERROR: No README.md file found!","main":"index.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":"","author":"Erin Thompson","license":"BSD","engines":{"node":"0.8.5"}}
