@@ -32,7 +32,7 @@ You can also send feedback directly to Modulus using the *contact* command. Make
 
 ##Creating an Account
 
-To start, you may need an account. Using the *signup* command, you can quickly create an account to get things rolling. It will prompt you for a few required pieces of information then set up and account.
+To start, you may need an account. Using the *signup* command, you can quickly create an account to get things rolling. It will prompt you for a few required pieces of information then set up an account.
 
     $ modulus signup
     Welcome to Modulus
@@ -74,8 +74,42 @@ To deploy an application to your new project, you can use either the *project de
     Uploading project...
     Upload progress [===================] 100%
     Deploying Project...
-    Deploying [    =               ]
+    INFO: Attaching persistent storage.
+    INFO: Found package.json file: /package.json
+    INFO: Node version not specifed in package.json, using latest stable version.
+    INFO: Initializing Node v0.10.13
+    INFO: Running npm install.
+    INFO: Registry: http://registry.npmjs.org
+    npm http GET http://registry.npmjs.org/express
+    npm http 304 http://registry.npmjs.org/express
+    npm http GET http://registry.npmjs.org/qs
+    npm http GET http://registry.npmjs.org/connect
+    npm http GET http://registry.npmjs.org/mime/1.2.4
+    npm http GET http://registry.npmjs.org/mkdirp/0.3.0
+    npm http 304 http://registry.npmjs.org/qs
+    npm http 304 http://registry.npmjs.org/connect
+    npm http 304 http://registry.npmjs.org/mime/1.2.4
+    npm http 304 http://registry.npmjs.org/mkdirp/0.3.0
+    npm http GET http://registry.npmjs.org/mime/-/mime-1.2.4.tgz
+    npm http GET http://registry.npmjs.org/mkdirp/-/mkdirp-0.3.0.tgz
+    npm http GET http://registry.npmjs.org/qs/-/qs-0.4.2.tgz
+    npm http 200 http://registry.npmjs.org/mime/-/mime-1.2.4.tgz
+    npm http 200 http://registry.npmjs.org/mkdirp/-/mkdirp-0.3.0.tgz
+    npm http 200 http://registry.npmjs.org/qs/-/qs-0.4.2.tgz
+    npm http GET http://registry.npmjs.org/formidable
+    npm http 304 http://registry.npmjs.org/formidable
+    express@2.5.11 node_modules/express
+    ├── qs@0.4.2
+    ├── mime@1.2.4
+    ├── mkdirp@0.3.0
+    └── connect@1.9.2 (formidable@1.0.14)
+    INFO: Main file found: /app.js
+    INFO: Starting application.
+    Express server started on port 8080
+    [2013-08-22T17:53:42.245Z] Application initialized with pid 11010
     [√] Lizard Locator running at lizard-locator-895.onmodulus.net
+
+The project's logs will be streamed in real-time during a deploy. You should see some information about Modulus' activity, as well as the NPM install process. In future deploy examples, these logs will be replaced for "...".
 
 You can also pass in a directory as a command argument, if you do not want to deploy the current directory.
 
@@ -88,7 +122,7 @@ You can also pass in a directory as a command argument, if you do not want to de
     Uploading project...
     Upload progress [===================] 100%
     Deploying Project...
-    Deploying [    =               ]
+    ...
     [√] Lizard Locator running at lizard-locator-895.onmodulus.net
 
 If you know which project you want to deploy to, you can use the *-p* option and provide the name of the project you would like to deploy to.
@@ -101,7 +135,7 @@ If you know which project you want to deploy to, you can use the *-p* option and
     Uploading project...
     Upload progress [===================] 100%
     Deploying Project...
-    Deploying [    =               ]
+    ...
     [√] Lizard Locator running at lizard-locator-895.onmodulus.net
 
 ##Environment Variables
