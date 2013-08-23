@@ -8,6 +8,8 @@
       
 This is the offical command line tool for <a href="https://modulus.io/" target="_blank">Modulus.io</a>. Use it to create and manage your Modulus.io projects. For more detailed descriptions of commands available, check out <a href="https://modulus.io/codex/cli/reference" target="_blank">the Modulus codex</a>.
 
+[![NPM](https://nodei.co/npm/modulus.png)](https://nodei.co/npm/modulus/)
+
 ##Installing
 To install the Modulus CLI, simply NPM install it globally.
 
