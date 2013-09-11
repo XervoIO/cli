@@ -8,6 +8,8 @@
       
 This is the offical command line tool for <a href="https://modulus.io/" target="_blank">Modulus.io</a>. Use it to create and manage your Modulus.io projects. For more detailed descriptions of commands available, check out <a href="https://modulus.io/codex/cli/reference" target="_blank">the Modulus codex</a>.
 
+[![NPM](https://nodei.co/npm/modulus.png)](https://nodei.co/npm/modulus/)
+
 ##Installing
 To install the Modulus CLI, simply NPM install it globally.
 
@@ -32,7 +34,7 @@ You can also send feedback directly to Modulus using the *contact* command. Make
 
 ##Creating an Account
 
-To start, you may need an account. Using the *signup* command, you can quickly create an account to get things rolling. It will prompt you for a few required pieces of information then set up and account.
+To start, you may need an account. Using the *signup* command, you can quickly create an account to get things rolling. It will prompt you for a few required pieces of information then set up an account.
 
     $ modulus signup
     Welcome to Modulus
@@ -44,7 +46,7 @@ To start, you may need an account. Using the *signup* command, you can quickly c
 
     You should receive an email at parker@example.com with more information.
 
-Once you have an account, you need to log in. Running the *login* command will prompt you for your Modulus credentials or link your GitHub account in the web portal (under account settings) and add the *--github* flag to login using your GitHub credentials. This keeps a session open so you can run commands under your account and the session will not be closed unless you run the logout command.
+Once you have an account, you need to log in. Running the *login* command will prompt you for your Modulus credentials or if you have linked your GitHub account in the web portal (under account settings) you can use the *--github* flag to login using your GitHub credentials. This keeps a session open so you can run commands under your account and the session will not be closed unless you run the *logout* command or log in with a different account.
 
     $ modulus login
     Welcome to Modulus
@@ -52,17 +54,9 @@ Once you have an account, you need to log in. Running the *login* command will p
     [?] Enter your password:
     [√] Signed in as user spiderman
 
-When you first create an account it is in a “beta locked” state. This means you cannot create or manage any projects until you unlock your account. Running the *unlock* command will prompt you for a beta code and unlock your account when a valid one is given.
-
-    $ modulus unlock
-    Welcome to Modulus
-    You are logged in as spiderman
-    [?] Enter a beta code: 2hMN2HFZ
-    [√] Your account has been unlocked. You may now create and deploy projects
-
 ##Project Management
 
-Once unlocked, you are ready to create a project. This is done with the *project create* command, and all that is required is a name.
+Once logged in, you are ready to create a project. This is done with the *project create* command, and all that is required is a name.
 
     $ modulus project create
     Welcome to Modulus
@@ -82,7 +76,68 @@ To deploy an application to your new project, you can use either the *project de
     Uploading project...
     Upload progress [===================] 100%
     Deploying Project...
-    Deploying [    =               ]
+    INFO: Attaching persistent storage.
+    INFO: Found package.json file: /package.json
+    INFO: Node version not specifed in package.json, using latest stable version.
+    INFO: Initializing Node v0.10.13
+    INFO: Running npm install.
+    INFO: Registry: http://registry.npmjs.org
+    npm http GET http://registry.npmjs.org/express
+    npm http 304 http://registry.npmjs.org/express
+    npm http GET http://registry.npmjs.org/qs
+    npm http GET http://registry.npmjs.org/connect
+    npm http GET http://registry.npmjs.org/mime/1.2.4
+    npm http GET http://registry.npmjs.org/mkdirp/0.3.0
+    npm http 304 http://registry.npmjs.org/qs
+    npm http 304 http://registry.npmjs.org/connect
+    npm http 304 http://registry.npmjs.org/mime/1.2.4
+    npm http 304 http://registry.npmjs.org/mkdirp/0.3.0
+    npm http GET http://registry.npmjs.org/mime/-/mime-1.2.4.tgz
+    npm http GET http://registry.npmjs.org/mkdirp/-/mkdirp-0.3.0.tgz
+    npm http GET http://registry.npmjs.org/qs/-/qs-0.4.2.tgz
+    npm http 200 http://registry.npmjs.org/mime/-/mime-1.2.4.tgz
+    npm http 200 http://registry.npmjs.org/mkdirp/-/mkdirp-0.3.0.tgz
+    npm http 200 http://registry.npmjs.org/qs/-/qs-0.4.2.tgz
+    npm http GET http://registry.npmjs.org/formidable
+    npm http 304 http://registry.npmjs.org/formidable
+    express@2.5.11 node_modules/express
+    ├── qs@0.4.2
+    ├── mime@1.2.4
+    ├── mkdirp@0.3.0
+    └── connect@1.9.2 (formidable@1.0.14)
+    INFO: Main file found: /app.js
+    INFO: Starting application.
+    Express server started on port 8080
+    [2013-08-22T17:53:42.245Z] Application initialized with pid 11010
+    [√] Lizard Locator running at lizard-locator-895.onmodulus.net
+
+The project's logs will be streamed in real-time during a deploy. You should see some information about Modulus' activity, as well as the NPM install process. In future deploy examples, these logs will be replaced for "...".
+
+You can also pass in a directory as a command argument, if you do not want to deploy the current directory.
+
+    $ modulus deploy my/project/directory
+    Welcome to Modulus
+    You are logged in as spiderman
+    [?] Are you sure you want to use project Lizard Locator? (yes) yes
+    Compressing project...
+    2.9 KB written
+    Uploading project...
+    Upload progress [===================] 100%
+    Deploying Project...
+    ...
+    [√] Lizard Locator running at lizard-locator-895.onmodulus.net
+
+If you know which project you want to deploy to, you can use the *-p* option and provide the name of the project you would like to deploy to.
+
+    $ modulus deploy -p "Lizard Locator" my/project/directory
+    Welcome to Modulus
+    You are logged in as spiderman
+    Compressing project...
+    2.9 KB written
+    Uploading project...
+    Upload progress [===================] 100%
+    Deploying Project...
+    ...
     [√] Lizard Locator running at lizard-locator-895.onmodulus.net
 
 ##Environment Variables
@@ -115,3 +170,48 @@ If you have no need for a variable anymore, you can provide the *env delete* com
     [√] Successfully deleted variable DB_AUTH from project Lizard Locator
 
 At any time, if you want to view the value of a single variable, use the *env get* command. It takes a name parameter and will display the value of the variable of the name you specify.
+
+##Logs
+
+In times when you need to check up on your projects, you can view the project's logs. This is done with the *project logs* command, which supports the *-p* option.
+
+    $ ./bin/modulus project logs -p "Lizard Locator"
+    Welcome to Modulus
+    You are logged in as spiderman
+    INFO: Attaching persistent storage.
+    INFO: Found package.json file: /package.json
+    INFO: Node version not specifed in package.json, using latest stable version.
+    INFO: Initializing Node v0.10.13
+    INFO: Running npm install.
+    INFO: Registry: http://registry.npmjs.org
+    npm http GET http://registry.npmjs.org/express
+    npm http 304 http://registry.npmjs.org/express
+    npm http GET http://registry.npmjs.org/qs
+    npm http GET http://registry.npmjs.org/connect
+    npm http GET http://registry.npmjs.org/mime/1.2.4
+    npm http GET http://registry.npmjs.org/mkdirp/0.3.0
+    npm http 304 http://registry.npmjs.org/qs
+    npm http 304 http://registry.npmjs.org/connect
+    npm http 304 http://registry.npmjs.org/mime/1.2.4
+    npm http 304 http://registry.npmjs.org/mkdirp/0.3.0
+    npm http GET http://registry.npmjs.org/mime/-/mime-1.2.4.tgz
+    npm http GET http://registry.npmjs.org/mkdirp/-/mkdirp-0.3.0.tgz
+    npm http GET http://registry.npmjs.org/qs/-/qs-0.4.2.tgz
+    npm http 200 http://registry.npmjs.org/mime/-/mime-1.2.4.tgz
+    npm http 200 http://registry.npmjs.org/mkdirp/-/mkdirp-0.3.0.tgz
+    npm http 200 http://registry.npmjs.org/qs/-/qs-0.4.2.tgz
+    npm http GET http://registry.npmjs.org/formidable
+    npm http 304 http://registry.npmjs.org/formidable
+    express@2.5.11 node_modules/express
+    ├── qs@0.4.2
+    ├── mime@1.2.4
+    ├── mkdirp@0.3.0
+    └── connect@1.9.2 (formidable@1.0.14)
+    INFO: Main file found: /app.js
+    INFO: Starting application.
+    Express server started on port 8080
+    [2013-08-22T17:53:42.245Z] Application initialized with pid 11010
+
+    [✓] Logs successfully retrieved.
+
+While these logs are not streamed directly to the CLI, the logs themselves are updated in real-time, so anytime you retrieve them they are current.
