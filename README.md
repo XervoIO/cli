@@ -5,7 +5,7 @@
  \ \_\ \ \_\\ \_____\\ \____- \ \_____\\ \_____\\ \_____\\/\_____\
   \/_/  \/_/ \/_____/ \/____/  \/_____/ \/_____/ \/_____/ \/_____/
 </pre>
-      
+
 This is the offical command line tool for <a href="https://modulus.io/" target="_blank">Modulus.io</a>. Use it to create and manage your Modulus.io projects. For more detailed descriptions of commands available, check out <a href="https://modulus.io/codex/cli/reference" target="_blank">the Modulus codex</a>.
 
 [![NPM](https://nodei.co/npm/modulus.png)](https://nodei.co/npm/modulus/)
@@ -171,11 +171,45 @@ If you have no need for a variable anymore, you can provide the *env delete* com
 
 At any time, if you want to view the value of a single variable, use the *env get* command. It takes a name parameter and will display the value of the variable of the name you specify.
 
+## API Tokens
+
+It is possible to invoke commands that require authentication without logging
+into a user account by using API tokens. This is especially useful when
+automating actions such as deploys or sharing a Modulus project with multiple
+developers without sharing a user name and password.
+
+    $ modulus token create
+    Welcome to Modulus
+    You are logged in as spiderman
+    [✓] Token: API-TOKEN
+
+API Tokens use the MODULUS_TOKEN environment variable and can be used with any
+command that requires authentication.
+
+    $ MODULUS_TOKEN=API-TOKEN modulus deploy
+    Welcome to Modulus
+    You are logged in as spiderman
+    [?] Are you sure you want to use project Lizard Locator? (yes)
+    ...
+
+Manage the API tokens that you have created using the list and remove commands.
+
+    $ modulus token list
+    Welcome to Modulus
+    You are logged in as spiderman
+    Current tokens:
+    API-TOKEN
+
+    $ modulus token remove API-TOKEN
+    Welcome to Modulus
+    You are logged in as spiderman
+    [✓] Token successfully removed.
+
 ##Logs
 
 In times when you need to check up on your projects, you can view the project's logs. This is done with the *project logs* command, which supports the *-p* option.
 
-    $ ./bin/modulus project logs -p "Lizard Locator"
+    $ modulus project logs -p "Lizard Locator"
     Welcome to Modulus
     You are logged in as spiderman
     INFO: Attaching persistent storage.
