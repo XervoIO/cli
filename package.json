@@ -13,11 +13,11 @@
     "command line",
     "modulusio"
   ],
-  "version": "0.2.1",
+  "version": "0.3.1",
   "author": "Modulus <feedback@modulus.io>",
   "maintainers": [
     "zwigby <ckey@paranoidferret.com>",
-    "busyrich <richard@modulus.com>",
+    "busyrich <richard@modulus.io>",
     "inconceivableduck <brandon@modulus.io>",
     "fiveisprime <matt@modulus.io>"
   ],
