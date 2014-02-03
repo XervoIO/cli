@@ -64,7 +64,7 @@ Once logged in, you are ready to create a project. This is done with the *projec
     [?] Enter a project name: Lizard Locator
     [√] New project Lizard Locator created.
 
-You can optionally project the name with *project create*.
+You can optionally pass in the name with *project create*.
 
     $ modulus project create "Lizard Locator"
     Welcome to Modulus
