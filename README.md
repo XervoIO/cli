@@ -179,6 +179,24 @@ If you have no need for a variable anymore, you can provide the *env delete* com
 
 At any time, if you want to view the value of a single variable, use the *env get* command. It takes a name parameter and will display the value of the variable of the name you specify.
 
+##MongoDB Database Management
+
+Once logged in, can create a MongoDB database. This is done with the *mongo create* command, and all that is required is a name.
+
+    $ modulus mongo create
+    Welcome to Modulus
+    You are logged in as spiderman
+    [?] Enter a database name: Lizard Locator DB
+    [√] New MongoDB database Lizard Locator DB created.
+
+You can optionally pass in the name with *mongo create*.
+
+    $ modulus mongo create "Lizard Locator DB"
+    Welcome to Modulus
+    You are logged in as spiderman
+    Creating MongoDB database Lizard Locator DB
+    [√] New MongoDB database Lizard Locator DB created.
+
 ##Logs
 
 In times when you need to check up on your projects, you can view the project's logs. This is done with the *project logs* command, which supports the *-p* option.
