@@ -181,7 +181,7 @@ At any time, if you want to view the value of a single variable, use the *env ge
 
 ##MongoDB Database Management
 
-Once logged in, can create a MongoDB database. This is done with the *mongo create* command, and all that is required is a name.
+Once logged in, you can create a MongoDB database. This is done with the *mongo create* command, and all that is required is a name.
 
     $ modulus mongo create
     Welcome to Modulus
