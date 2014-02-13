@@ -5,7 +5,7 @@
  \ \_\ \ \_\\ \_____\\ \____- \ \_____\\ \_____\\ \_____\\/\_____\
   \/_/  \/_/ \/_____/ \/____/  \/_____/ \/_____/ \/_____/ \/_____/
 </pre>
-      
+
 This is the offical command line tool for <a href="https://modulus.io/" target="_blank">Modulus.io</a>. Use it to create and manage your Modulus.io projects. For more detailed descriptions of commands available, check out <a href="https://modulus.io/codex/cli/reference" target="_blank">the Modulus codex</a>.
 
 [![NPM](https://nodei.co/npm/modulus.png)](https://nodei.co/npm/modulus/)
@@ -62,6 +62,14 @@ Once logged in, you are ready to create a project. This is done with the *projec
     Welcome to Modulus
     You are logged in as spiderman
     [?] Enter a project name: Lizard Locator
+    [√] New project Lizard Locator created.
+
+You can optionally pass in the name with *project create*.
+
+    $ modulus project create "Lizard Locator"
+    Welcome to Modulus
+    You are logged in as spiderman
+    Creating project Lizard Locator
     [√] New project Lizard Locator created.
 
 To deploy an application to your new project, you can use either the *project deploy* command or its shorter sidekick, *deploy*. This command will take all the contents of your current directory, zip them up and deploy them. Once the deploy has started, the progress will be displayed. When the deploy completes, you have a running application on Modulus. You can redeploy a new version of the project at any time using the same process.
@@ -170,6 +178,24 @@ If you have no need for a variable anymore, you can provide the *env delete* com
     [√] Successfully deleted variable DB_AUTH from project Lizard Locator
 
 At any time, if you want to view the value of a single variable, use the *env get* command. It takes a name parameter and will display the value of the variable of the name you specify.
+
+##MongoDB Database Management
+
+Once logged in, you can create a MongoDB database. This is done with the *mongo create* command, and all that is required is a name.
+
+    $ modulus mongo create
+    Welcome to Modulus
+    You are logged in as spiderman
+    [?] Enter a database name: Lizard Locator DB
+    [√] New MongoDB database Lizard Locator DB created.
+
+You can optionally pass in the name with *mongo create*.
+
+    $ modulus mongo create "Lizard Locator DB"
+    Welcome to Modulus
+    You are logged in as spiderman
+    Creating MongoDB database Lizard Locator DB
+    [√] New MongoDB database Lizard Locator DB created.
 
 ##Logs
 
