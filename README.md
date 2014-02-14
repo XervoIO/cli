@@ -197,6 +197,21 @@ You can optionally pass in the name with *mongo create*.
     Creating MongoDB database Lizard Locator DB
     [√] New MongoDB database Lizard Locator DB created.
 
+Once a database has been created a user should be added to it. Use the *mongo user create* command to create a database user.
+
+    $ modulus mongo user create
+    Welcome to Modulus
+    You are logged in as spiderman
+    Please choose which database to use:
+      1) Lizard Locator DB
+      2) Green Goblin DB
+    [?] database 2
+    Selected MongoDB database Green Goblin DB.
+    [?] Enter username: johnny
+    [?] Enter password: five
+    [?] Read only permissions? (yes) no
+    [✓] New MongoDB database user johnny created.
+
 ##Logs
 
 In times when you need to check up on your projects, you can view the project's logs. This is done with the *project logs* command, which supports the *-p* option.
