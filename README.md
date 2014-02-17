@@ -212,11 +212,45 @@ Once a database has been created a user should be added to it. Use the *mongo us
     [?] Read only permissions? (yes) no
     [✓] New MongoDB database user johnny created.
 
+## API Tokens
+
+It is possible to invoke commands that require authentication without logging
+into a user account by using API tokens. This is especially useful when
+automating actions such as deploys or sharing a Modulus project with multiple
+developers without sharing a user name and password.
+
+    $ modulus token create
+    Welcome to Modulus
+    You are logged in as spiderman
+    [✓] Token: API-TOKEN
+
+API Tokens use the MODULUS_TOKEN environment variable and can be used with any
+command that requires authentication.
+
+    $ MODULUS_TOKEN=API-TOKEN modulus deploy
+    Welcome to Modulus
+    You are logged in as spiderman
+    [?] Are you sure you want to use project Lizard Locator? (yes)
+    ...
+
+Manage the API tokens that you have created using the list and remove commands.
+
+    $ modulus token list
+    Welcome to Modulus
+    You are logged in as spiderman
+    Current tokens:
+    API-TOKEN
+
+    $ modulus token remove API-TOKEN
+    Welcome to Modulus
+    You are logged in as spiderman
+    [✓] Token successfully removed.
+
 ##Logs
 
 In times when you need to check up on your projects, you can view the project's logs. This is done with the *project logs* command, which supports the *-p* option.
 
-    $ ./bin/modulus project logs -p "Lizard Locator"
+    $ modulus project logs -p "Lizard Locator"
     Welcome to Modulus
     You are logged in as spiderman
     INFO: Attaching persistent storage.
