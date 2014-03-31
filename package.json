@@ -13,11 +13,11 @@
     "command line",
     "modulusio"
   ],
-  "version": "0.2.1",
+  "version": "0.5.1",
   "author": "Modulus <feedback@modulus.io>",
   "maintainers": [
     "zwigby <ckey@paranoidferret.com>",
-    "busyrich <richard@modulus.com>",
+    "busyrich <richard@modulus.io>",
     "inconceivableduck <brandon@modulus.io>",
     "fiveisprime <matt@modulus.io>"
   ],
@@ -45,7 +45,8 @@
     "fstream-ignore": "0.0.x",
     "demeteorizer": "0.3.x",
     "fs-tools": "~0.2.10",
-    "find-file-sync": "0.0.2"
+    "find-file-sync": "0.0.2",
+    "update-notifier": "~0.1.7"
   },
   "devDependencies": {
     "mocha": "1.5.x",
