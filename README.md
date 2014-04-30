@@ -6,7 +6,7 @@
   \/_/  \/_/ \/_____/ \/____/  \/_____/ \/_____/ \/_____/ \/_____/
 </pre>
 
-This is the offical command line tool for <a href="https://modulus.io/" target="_blank">Modulus.io</a>. Use it to create and manage your Modulus.io projects. For more detailed descriptions of commands available, check out <a href="https://modulus.io/codex/cli/reference" target="_blank">the Modulus codex</a>.
+This is the official command line tool for <a href="https://modulus.io/" target="_blank">Modulus.io</a>. Use it to create and manage your Modulus.io projects. For more detailed descriptions of commands available, check out <a href="https://modulus.io/codex/cli/reference" target="_blank">the Modulus codex</a>.
 
 [![NPM](https://nodei.co/npm/modulus.png)](https://nodei.co/npm/modulus/)
 
@@ -86,7 +86,7 @@ To deploy an application to your new project, you can use either the *project de
     Deploying Project...
     INFO: Attaching persistent storage.
     INFO: Found package.json file: /package.json
-    INFO: Node version not specifed in package.json, using latest stable version.
+    INFO: Node version not specified in package.json, using latest stable version.
     INFO: Initializing Node v0.10.13
     INFO: Running npm install.
     INFO: Registry: http://registry.npmjs.org
@@ -255,7 +255,7 @@ In times when you need to check up on your projects, you can view the project's 
     You are logged in as spiderman
     INFO: Attaching persistent storage.
     INFO: Found package.json file: /package.json
-    INFO: Node version not specifed in package.json, using latest stable version.
+    INFO: Node version not specified in package.json, using latest stable version.
     INFO: Initializing Node v0.10.13
     INFO: Running npm install.
     INFO: Registry: http://registry.npmjs.org
