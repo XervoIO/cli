@@ -1,0 +1,15 @@
+#!/usr/bin/expect
+
+set timeout 300
+
+set MODULUS ../bin/modulus
+
+spawn $MODULUS project scale joyent.us-east-1=2 joyent.eu-ams-1=2 aws.us-east-1a=3
+
+expect {
+  "(yes)" {send "\r"}
+}
+
+expect {
+  "servos" {send "\r"}
+}
