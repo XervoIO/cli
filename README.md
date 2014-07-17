@@ -4,13 +4,12 @@
      \ \_\ \ \_\\ \_____\\ \____- \ \_____\\ \_____\\ \_____\\/\_____\
       \/_/  \/_/ \/_____/ \/____/  \/_____/ \/_____/ \/_____/ \/_____/
 
-This is the official command line tool for <a href="https://modulus.io/"
-target="_blank">Modulus.io</a>. Use it to create and manage your Modulus.io
-projects. For more detailed descriptions of commands available, check out <a
-href="https://modulus.io/codex/cli/reference" target="_blank">the Modulus
-codex</a>.
+This is the official command line tool for [Modulus.io](https://modulus.io/).
+Use it to create and manage your Modulus.io projects. For more detailed
+descriptions of commands available, check out [the Modulus
+codex](https://modulus.io/codex/cli/reference).
 
-[![NPM](https://nodei.co/npm/modulus.png)](https://nodei.co/npm/modulus/)
+[![NPM](https://nodei.co/npm/modulus.svg)](https://nodei.co/npm/modulus/)
 
 ##Installing
 
