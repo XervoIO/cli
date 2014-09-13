@@ -4,12 +4,12 @@
      \ \_\ \ \_\\ \_____\\ \____- \ \_____\\ \_____\\ \_____\\/\_____\
       \/_/  \/_/ \/_____/ \/____/  \/_____/ \/_____/ \/_____/ \/_____/
 
+[![NPM version](https://badge.fury.io/js/modulus.svg)](http://badge.fury.io/js/modulus)
+
 This is the official command line tool for [Modulus.io](https://modulus.io/).
 Use it to create and manage your Modulus.io projects. For more detailed
 descriptions of commands available, check out [the Modulus
 codex](https://modulus.io/codex/cli/reference).
-
-[![NPM](https://nodei.co/npm/modulus.svg)](https://nodei.co/npm/modulus/)
 
 ##Installing
 
