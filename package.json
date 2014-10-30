@@ -36,7 +36,7 @@
     "async": "0.1.x",
     "colors": "0.6.x",
     "commander-plus": "0.0.x",
-    "demeteorizer": "2.0.1",
+    "demeteorizer": "2.0.3",
     "find-file-sync": "0.0.2",
     "fs-tools": "~0.2.10",
     "fstream-ignore": "0.0.x",
