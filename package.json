@@ -45,6 +45,7 @@
     "prompt": "0.2.x",
     "request": "2.27.x",
     "split": "0.3.0",
+    "text-table": "0.2.0",
     "through": "2.3.4",
     "underscore": "1.4.x",
     "update-notifier": "~0.1.7"
