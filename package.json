@@ -32,7 +32,6 @@
     }
   ],
   "dependencies": {
-    "archiver": "0.4.x",
     "async": "0.1.x",
     "colors": "0.6.x",
     "commander-plus": "0.0.x",
@@ -48,7 +47,8 @@
     "text-table": "0.2.0",
     "through": "2.3.4",
     "underscore": "1.4.x",
-    "update-notifier": "~0.1.7"
+    "update-notifier": "~0.1.7",
+    "zip-stream": "0.5.1"
   },
   "devDependencies": {
     "mocha": "1.5.x",
