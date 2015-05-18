@@ -13,7 +13,7 @@
     "command line",
     "modulusio"
   ],
-  "version": "3.2.1",
+  "version": "3.7.3",
   "author": "Modulus <feedback@modulus.io>",
   "maintainers": [
     "zwigby <ckey@paranoidferret.com>",
@@ -32,11 +32,10 @@
     }
   ],
   "dependencies": {
-    "archiver": "0.4.x",
     "async": "0.1.x",
     "colors": "0.6.x",
     "commander-plus": "0.0.x",
-    "demeteorizer": "2.0.6",
+    "demeteorizer": "2.2.2",
     "find-file-sync": "0.0.2",
     "fs-tools": "~0.2.10",
     "fstream-ignore": "0.0.x",
@@ -45,9 +44,11 @@
     "prompt": "0.2.x",
     "request": "2.27.x",
     "split": "0.3.0",
+    "text-table": "0.2.0",
     "through": "2.3.4",
     "underscore": "1.4.x",
-    "update-notifier": "~0.1.7"
+    "update-notifier": "~0.1.7",
+    "zip-stream": "0.5.1"
   },
   "devDependencies": {
     "mocha": "1.5.x",
