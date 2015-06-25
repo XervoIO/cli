@@ -13,7 +13,7 @@
     "command line",
     "modulusio"
   ],
-  "version": "3.10.2",
+  "version": "3.10.3",
   "author": "Modulus <feedback@modulus.io>",
   "maintainers": [
     "zwigby <ckey@paranoidferret.com>",
@@ -61,5 +61,6 @@
   "preferGlobal": true,
   "engines": {
     "node": ">= 0.8.0"
-  }
+  },
+  "scripts": {}
 }
