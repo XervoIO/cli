@@ -68,8 +68,7 @@ command that requires authentication.
 
 Manage the API tokens that you have created using the list and remove commands.
 
-    $ modulus token list
-    $ modulus token remove API-TOKEN
+    $ modulus token list modulus token remove API-TOKEN
 
 ##Project Management
 
@@ -82,7 +81,8 @@ You can optionally pass in the name with *project create*.
 
     $ modulus project create "Lizard Locator"
 
-You can also delete a project with *project delete*. Add the *-p* option to pass in a project name.
+You can also delete a project with *project delete*. Add the *-p* option to pass
+in a project name.
 
     $ modulus project delete
 
@@ -93,8 +93,7 @@ deploy has started, the progress will be displayed. When the deploy completes,
 you have a running application on Modulus. You can redeploy a new version of the
 project at any time using the same process.
 
-    $ cd my/project/directory
-    $ modulus deploy
+    $ cd my/project/directory modulus deploy
 
 The project's logs will be streamed in real-time during a deploy. You should see
 some information about Modulus' activity, as well as the npm install process.
@@ -119,7 +118,8 @@ To start, stop, or restart a project, use:
 
 The *-p* option is available with these commands as well.
 
-To scale a project to use multiple servos in a single infrastructure/region, you can use *project scale <number>*.
+To scale a project to use multiple servos in a single infrastructure/region, you
+can use *project scale <number>*.
 
     $ modulus project scale 2
 
@@ -127,7 +127,9 @@ For multiple infrastructure providers and regions, you need more details.
 
     $ modulus project scale aws.us-east-1a=1 joyent.us-east-1=1
 
-Note that existing scale options are overwritten with this command. For example, if a project is scaled to Digital Ocean, this will remove the Digital Ocean servos and you'll end up with 1 in AWS and 1 in Joyent.
+Note that existing scale options are overwritten with this command. For example,
+if a project is scaled to Digital Ocean, this will remove the Digital Ocean
+servos and you'll end up with 1 in AWS and 1 in Joyent.
 
 ##Servo Commands
 
@@ -139,7 +141,7 @@ And you can restart a single servo with *servo restart*.
 
     $ modulus servo restart
 
- The *-i* option allows you to specify a servo id.
+ The*-i*optionallowsyoutospecifyaservoid.
 
     $ modulus servo restart -i SERVO-ID
 
@@ -183,14 +185,14 @@ user create* command to create a database user.
 
 ##Add-Ons Management
 
-After logging in, you can set up add-ons for your project. To add an add-on to a project, use *addons add*:
+After logging in, you can set up add-ons for your project. To add an add-on to a
+project, use *addons add*:
 
     $ modulus addons add keen:developer
 
 Remove add-ons using *addons remove*:
 
-    $ modulus addons list
-    $ modulus addons remove keen
+    $ modulus addons list modulus addons remove keen
 
 ##Logs
 
@@ -201,13 +203,15 @@ option.
     $ modulus project logs -p "Lizard Locator"
 
 While these logs are not streamed directly to the CLI, the logs themselves are
-updated in real-time, so anytime you retrieve them they are current. To stream your project's logs, you can use *logs tail*.
+updated in real-time, so anytime you retrieve them they are current. To stream
+your project's logs, you can use *logs tail*.
 
     $ modulus project logs tail
 
 ##Status
 
-The *status* command allows you to view the status of Modulus as set on status.modulus.io.
+The *status* command allows you to view the status of Modulus as set on
+status.modulus.io.
 
     $ modulus status
 
@@ -215,23 +219,19 @@ The *status* command allows you to view the status of Modulus as set on status.m
 
 Copyright (c) Modulus
 
-Permission is hereby granted, free of charge, to any person
-obtaining a copy of this software and associated documentation
-files (the "Software"), to deal in the Software without
-restriction, including without limitation the rights to use,
-copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the
-Software is furnished to do so, subject to the following
-conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
 
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
