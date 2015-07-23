@@ -68,7 +68,8 @@ command that requires authentication.
 
 Manage the API tokens that you have created using the list and remove commands.
 
-    $ modulus token list modulus token remove API-TOKEN
+    $ modulus token list
+    $ modulus token remove API-TOKEN
 
 ##Project Management
 
@@ -141,7 +142,7 @@ And you can restart a single servo with *servo restart*.
 
     $ modulus servo restart
 
- The*-i*optionallowsyoutospecifyaservoid.
+ The *-i* option allows you to specify a servo id.
 
     $ modulus servo restart -i SERVO-ID
 
@@ -192,7 +193,8 @@ project, use *addons add*:
 
 Remove add-ons using *addons remove*:
 
-    $ modulus addons list modulus addons remove keen
+    $ modulus addons list
+    $ modulus addons remove keen
 
 ##Logs
 
