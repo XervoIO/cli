@@ -50,8 +50,9 @@
     "zip-stream": "0.5.1"
   },
   "devDependencies": {
-    "mocha": "1.5.x",
-    "express": "3.0.x"
+    "@modulus/standard": "0.4.x",
+    "express": "3.0.x",
+    "mocha": "1.5.x"
   },
   "main": "./lib/modulus",
   "bin": {
@@ -61,5 +62,8 @@
   "engines": {
     "node": ">= 0.8.0"
   },
-  "scripts": {}
+  "scripts": {
+    "lint": "mod-standard",
+    "posttest": "npm run lint"
+  }
 }
