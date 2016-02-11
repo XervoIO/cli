@@ -32,6 +32,7 @@
     }
   ],
   "dependencies": {
+    "@modulus/logger": "~1.2.0",
     "async": "0.1.x",
     "colors": "0.6.x",
     "commander-plus": "0.0.x",
