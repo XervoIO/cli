@@ -1,32 +1,37 @@
-var express = require('express');
-var app = express.createServer();
+const Express = require('express');
+const Logger = require('@modulus/logger')('CLI');
+const Path = require('path');
 
-console.log(process.env);
+const App = Express.createServer();
 
-app.configure(function(){
-  app.use(express.static(__dirname + '/public'));
-  app.set('view engine', 'ejs');
+const PORT = 8080;
+
+Logger.debug(process.env);// eslint-disable-line no-process-env
+
+App.configure(function () {
+  App.use(Express.static(Path.join(__dirname, '/public')));
+  App.set('view engine', 'ejs');
 });
 
-app.get('/', function(req, res){
+App.get('/', function (req, res) {
   res.render('index', {});
 });
 
-app.get('/location/cincy', function(req, res){
+App.get('/location/cincy', function (req, res) {
   res.render('cincy');
 });
 
-app.get('/location/stlouis', function(req, res){
+App.get('/location/stlouis', function (req, res) {
   res.render('stlouis', {});
 });
 
-app.get('/location/wichita', function(req, res){
+App.get('/location/wichita', function (req, res) {
   res.render('wichita', {});
 });
 
-app.get('/location/albuquerque', function(req, res){
+App.get('/location/albuquerque', function (req, res) {
   res.render('albuquerque', {});
 });
 
-app.listen(8080);
-console.log('Listening on port 8080');
+App.listen(PORT);
+Logger.debug('Listening on port', PORT);
