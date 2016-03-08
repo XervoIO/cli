@@ -16,6 +16,12 @@
   "version": "5.0.1",
   "author": "Modulus <feedback@modulus.io>",
   "maintainers": [
+    "franvarney <fvarney@progress.com>",
+    "harlanj <jharlan@progress.com>",
+    "jackboberg <jack.boberg@progress.com>",
+    "tzmanics <tmanicsi@progress.com>"
+  ],
+  "contributors": [
     "zwigby <ckey@paranoidferret.com>",
     "busyrich <richard@modulus.io>",
     "inconceivableduck <brandon@modulus.io>",
@@ -52,7 +58,7 @@
     "zip-stream": "0.5.1"
   },
   "devDependencies": {
-    "@modulus/standard": "~0.5.0",
+    "@modulus/standard": "0.5.x",
     "express": "3.0.x",
     "mocha": "1.5.x"
   },
