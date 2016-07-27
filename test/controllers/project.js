@@ -26,8 +26,11 @@ describe('projectController', function () {
       });
 
       it('returns true on passing non-semver version', function (done) {
-        supported = Controller.isSupported('1.3.3.4', 'Meteor');
-        expect(supported).to.equal(true);
+        var nonSemver = ['1.3.3.4', '1.4', '1.5-beta', '2.alpha', '2-alpha', '3'];
+        nonSemver.forEach(function (version) {
+          supported = Controller.isSupported(version, 'Meteor');
+          expect(supported).to.equal(true);
+        });
         done();
       });
 
@@ -54,6 +57,15 @@ describe('projectController', function () {
       it('returns false when minor does not pass', function (done) {
         supported = Controller.isSupported('1.2.4', 'Meteor');
         expect(supported).to.equal(false);
+        done();
+      });
+
+      it('returns false on failing non-semver version', function (done) {
+        var nonSemver = ['0', '0.1', '1', '1.2-alpha', 'infinite'];
+        nonSemver.forEach(function (version) {
+          supported = Controller.isSupported(version, 'Meteor');
+          expect(supported).to.equal(false);
+        });
         done();
       });
     });
