@@ -109,6 +109,27 @@ provide the name of the project you would like to deploy to.
 
     $ modulus deploy -p "Lizard Locator" my/project/directory
 
+You can specify the node and npm version that your Node.js/Meteor application will use.
+For Node.js projects, you can specify this within the engines block in the `package.json`.
+
+```json
+{
+  "engines": {
+    "node": "4.4.7",
+    "npm": "3.10.5"
+  }
+}
+```
+
+To specify the node and npm versions on Meteor projects you can deploy with the
+--node-version and --npm-version flags
+
+    $ modulus deploy -p "Lizard Locator" --node-version 4.4.3 --npm-version 3.10.5
+
+Meteor projects can set the --debug flag on deploys.
+
+    $ modulus deploy -p "Lizard Locator" --debug
+
 To start, stop, or restart a project, use:
 
     $ modulus project start
