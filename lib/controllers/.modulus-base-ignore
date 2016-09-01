@@ -5,3 +5,4 @@
 modulus-auto-zip-*
 __MACOSX/
 .DS_Store
+.nvmrc
