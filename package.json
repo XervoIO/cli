@@ -1,9 +1,10 @@
 {
-  "name": "modulus",
-  "description": "The command line interface for deploying applications to the Modulus hosting platform.",
+  "name": "@xervo/cli",
+  "description": "The command line interface for deploying applications to the Xervo hosting platform.",
   "keywords": [
     "cli",
     "modulus",
+    "xervo",
     "hosting",
     "cloud hosting",
     "paas",
@@ -11,24 +12,23 @@
     "deployment",
     "deploy",
     "command line",
+    "xervoio",
     "modulusio"
   ],
   "version": "6.5.1",
-  "author": "Modulus <feedback@modulus.io>",
+  "author": "Xervo <info@xervo.io>",
   "maintainers": [
-    "zwigby <ckey@paranoidferret.com>",
-    "busyrich <richard@modulus.io>",
-    "inconceivableduck <brandon@modulus.io>",
-    "fiveisprime <matt@modulus.io>"
+    "Jack Boberg <jack@hellotangible.com>",
+    "Jeremiah Harlan <jeremiah@hellotangible.com>"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/onmodulus/modulus-cli.git"
+    "url": "https://github.com/XervoIO/cli.git"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/onmodulus/modulus-cli/blob/master/LICENSE-MIT"
+      "url": "https://github.com/XervoIO/cli/blob/master/LICENSE-MIT"
     }
   ],
   "dependencies": {
@@ -54,9 +54,9 @@
     "code": "~1.5.0",
     "lab": "~6.2.0"
   },
-  "main": "./lib/modulus",
+  "main": "./lib/xervo",
   "bin": {
-    "modulus": "./bin/modulus"
+    "xervo": "./bin/xervo"
   },
   "preferGlobal": true,
   "engines": {
