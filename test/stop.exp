@@ -2,9 +2,9 @@
 
 set timeout 300
 
-set MODULUS ../bin/modulus
+set CLI ../bin/xervo
 
-spawn $MODULUS project stop
+spawn $CLI project stop
 
 expect {
   "yes" {send "\r"}
