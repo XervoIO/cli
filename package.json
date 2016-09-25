@@ -42,7 +42,7 @@
     "opener": "1.4.2",
     "progress": "1.1.8",
     "prompt": "1.0.0",
-    "request": "2.27.x",
+    "request": "2.75.0",
     "semver": "^5.1.0",
     "split": "1.0.0",
     "text-table": "0.2.0",
