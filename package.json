@@ -33,7 +33,7 @@
   ],
   "dependencies": {
     "async": "0.1.x",
-    "colors": "0.6.x",
+    "colors": "1.1.2",
     "commander-plus": "0.0.x",
     "find-file-sync": "0.0.4",
     "fs-tools": "~0.2.10",
