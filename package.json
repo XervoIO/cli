@@ -46,7 +46,7 @@
     "semver": "^5.1.0",
     "split": "1.0.0",
     "text-table": "0.2.0",
-    "through": "2.3.4",
+    "through": "2.3.8",
     "underscore": "1.4.x",
     "update-notifier": "^1.0.2",
     "zip-stream": "0.5.1"
