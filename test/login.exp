@@ -3,7 +3,7 @@
 set timeout 300
 
 set CLI ../bin/xervo
-set USERNAME brandon@modulus.io
+set USERNAME test@xervo.io
 set PASSWORD qwerty
 
 spawn $CLI login
@@ -17,5 +17,5 @@ expect {
 }
 
 expect {
-  "brandon@modulus.io" {send "\r"}
+  "test@xervo.io" {send "\r"}
 }

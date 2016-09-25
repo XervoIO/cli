@@ -1,113 +1,113 @@
-#MODULUS CLI
+# Xervo CLI
 
-[![NPM version](https://badge.fury.io/js/modulus.svg)](http://badge.fury.io/js/modulus)
+[![npm](https://img.shields.io/npm/v/@xervo/cli.svg?maxAge=2592000)][npm]
 
-This is the official command line tool for [Modulus.io](https://modulus.io/).
-Use it to create and manage your Modulus.io projects. For more detailed
-descriptions of commands available, check out [the Modulus
-codex](https://modulus.io/codex/cli/reference).
+This is the official command line tool for [Xervo.io](https://xervo.io/).
+Use it to create and manage your Xervo.io projects. For more detailed
+descriptions of commands available, check out [the Xervo
+codex](https://xervo.io/codex/cli/reference).
 
-##Installing
+## Installing
 
-To install the Modulus CLI, simply npm install it globally.
+To install the Xervo CLI, simply npm install it globally.
 
-    $ npm install -g modulus
+    $ npm install -g @xervo/cli
 
-##Usage
+## Usage
 
 Using the CLI is easy.
 
-    Usage: modulus <command> <param1> <param2>
+    Usage: xervo <command> <param1> <param2>
 
 At any point you can run the *help* command to get a full list of commands and
 how to use them.
 
-You can also send feedback directly to Modulus using the *contact* command. Make
+You can also send feedback directly to Xervo using the *contact* command. Make
 sure your message is enclosed in double quotes (eg. “Your message”).
 
-    $ modulus contact "This is feedback from the CLI!"
+    $ xervo contact "This is feedback from the CLI!"
 
-##Account Related Commands
+## Account Related Commands
 
 To start, you may need an account. Using the *signup* command, you can quickly
 create an account to get things rolling. It will prompt you for a few required
 pieces of information then set up an account.
 
-    $ modulus signup
+    $ xervo signup
 
 Once you have an account, you need to log in. Running the *login* command will
-prompt you for your Modulus credentials or if you have linked your GitHub
+prompt you for your Xervo credentials or if you have linked your GitHub
 account in the web portal (under account settings) you can use the *--github*
 flag to login using your GitHub credentials. This keeps a session open so you
 can run commands under your account and the session will not be closed unless
 you run the *logout* command or log in with a different account.
 
-    $ modulus login
+    $ xervo login
 
 You can also reset your password.
 
-    $ modulus resetPassword
+    $ xervo resetPassword
 
 And to logout:
 
-    $ modulus logout
+    $ xervo logout
 
-##API Tokens
+## API Tokens
 
 It is possible to invoke commands that require authentication without logging
 into a user account by using API tokens. This is especially useful when
-automating actions such as deploys or sharing a Modulus project with multiple
+automating actions such as deploys or sharing a Xervo project with multiple
 developers without sharing a user name and password.
 
-    $ modulus token create
+    $ xervo token create
 
-API Tokens use the `MODULUS_TOKEN` environment variable and can be used with any
+API Tokens use the `XERVO_TOKEN` environment variable and can be used with any
 command that requires authentication.
 
-    $ MODULUS_TOKEN=API-TOKEN modulus deploy
+    $ XERVO_TOKEN=API-TOKEN xervo deploy
 
 Manage the API tokens that you have created using the list and remove commands.
 
-    $ modulus token list
-    $ modulus token remove API-TOKEN
+    $ xervo token list
+    $ xervo token remove API-TOKEN
 
-##Project Management
+## Project Management
 
 Once logged in, you are ready to create a project. This is done with the
 *project create* command, and all that is required is a name.
 
-    $ modulus project create
+    $ xervo project create
 
 You can optionally pass in the name with *project create*.
 
-    $ modulus project create "Lizard Locator"
+    $ xervo project create "Lizard Locator"
 
 You can also delete a project with *project delete*. Add the *-p* option to pass
 in a project name.
 
-    $ modulus project delete
+    $ xervo project delete
 
 To deploy an application to your new project, you can use either the *project
 deploy* command or its shorter sidekick, *deploy*. This command will take all
 the contents of your current directory, zip them up and deploy them. Once the
 deploy has started, the progress will be displayed. When the deploy completes,
-you have a running application on Modulus. You can redeploy a new version of the
+you have a running application on Xervo. You can redeploy a new version of the
 project at any time using the same process.
 
-    $ cd my/project/directory modulus deploy
+    $ cd my/project/directory xervo deploy
 
 The project's logs will be streamed in real-time during a deploy. You should see
-some information about Modulus' activity, as well as the npm install process.
+some information about Xervo' activity, as well as the npm install process.
 
 You can also pass in a directory as a command argument, if you do not want to
 deploy the current directory.
 
-    $ modulus deploy my/project/directory
+    $ xervo deploy my/project/directory
 
 If you know which project you want to deploy to, you can use the *-p* option and
 provide the name of the project you would like to deploy to.
 
-    $ modulus deploy -p "Lizard Locator" my/project/directory
+    $ xervo deploy -p "Lizard Locator" my/project/directory
 
 You can specify the node and npm version that your Node.js/Meteor application will use.
 For Node.js projects, you can specify this within the engines block in the `package.json`.
@@ -124,123 +124,123 @@ For Node.js projects, you can specify this within the engines block in the `pack
 To specify the node and npm versions on Meteor projects you can deploy with the
 --node-version and --npm-version flags
 
-    $ modulus deploy -p "Lizard Locator" --node-version 4.4.3 --npm-version 3.10.5
+    $ xervo deploy -p "Lizard Locator" --node-version 4.4.3 --npm-version 3.10.5
 
 Meteor projects can set the --debug flag on deploys.
 
-    $ modulus deploy -p "Lizard Locator" --debug
+    $ xervo deploy -p "Lizard Locator" --debug
 
 To start, stop, or restart a project, use:
 
-    $ modulus project start
+    $ xervo project start
 
-    $ modulus project stop
+    $ xervo project stop
 
-    $ modulus project restart
+    $ xervo project restart
 
 The *-p* option is available with these commands as well.
 
 To scale a project to use multiple servos in a single infrastructure/region, you
 can use *project scale <number>*.
 
-    $ modulus project scale 2
+    $ xervo project scale 2
 
 For multiple infrastructure providers and regions, you need more details.
 
-    $ modulus project scale aws.us-east-1a=1 joyent.us-east-1=1
+    $ xervo project scale aws.us-east-1a=1 joyent.us-east-1=1
 
 Note that existing scale options are overwritten with this command. For example,
 if a project is scaled to Digital Ocean, this will remove the Digital Ocean
 servos and you'll end up with 1 in AWS and 1 in Joyent.
 
-##Servo Commands
+## Servo Commands
 
 You can now also view all of your servos with *servo list*.
 
-    $ modulus servo list
+    $ xervo servo list
 
 And you can restart a single servo with *servo restart*.
 
-    $ modulus servo restart
+    $ xervo servo restart
 
  The *-i* option allows you to specify a servo id.
 
-    $ modulus servo restart -i SERVO-ID
+    $ xervo servo restart -i SERVO-ID
 
-##Environment Variables
+## Environment Variables
 
 The CLI also provides an easy way to manage a project’s environment variables.
 You can start with listing your current variables with the *env list* command.
 
-    $ modulus env list
+    $ xervo env list
 
 To add a new variable, use the *env set* command. It takes two parameters, name
 and value. This command can also be used to change the value of an existing
 variable.
 
-    $ modulus env set DB_AUTH 12345
+    $ xervo env set DB_AUTH 12345
 
 If you have no need for a variable anymore, you can provide the *env delete*
 command with a name and it will be removed from the project.
 
-    $ modulus env delete DB_AUTH
+    $ xervo env delete DB_AUTH
 
 At any time, if you want to view the value of a single variable, use the *env
 get* command. It takes a name parameter and will display the value of the
 variable of the name you specify.
 
-##MongoDB Database Management
+## MongoDB Database Management
 
 Once logged in, you can create a MongoDB database. This is done with the *mongo
 create* command, and all that is required is a name.
 
-    $ modulus mongo create
+    $ xervo mongo create
 
 You can optionally pass in the name with *mongo create*.
 
-    $ modulus mongo create "Lizard Locator DB"
+    $ xervo mongo create "Lizard Locator DB"
 
 Once a database has been created a user should be added to it. Use the *mongo
 user create* command to create a database user.
 
-    $ modulus mongo user create
+    $ xervo mongo user create
 
-##Add-Ons Management
+## Add-Ons Management
 
 After logging in, you can set up add-ons for your project. To add an add-on to a
 project, use *addons add*:
 
-    $ modulus addons add keen:developer
+    $ xervo addons add keen:developer
 
 Remove add-ons using *addons remove*:
 
-    $ modulus addons list
-    $ modulus addons remove keen
+    $ xervo addons list
+    $ xervo addons remove keen
 
-##Logs
+## Logs
 
 In times when you need to check up on your projects, you can view the project's
 logs. This is done with the *project logs* command, which supports the *-p*
 option.
 
-    $ modulus project logs -p "Lizard Locator"
+    $ xervo project logs -p "Lizard Locator"
 
 While these logs are not streamed directly to the CLI, the logs themselves are
 updated in real-time, so anytime you retrieve them they are current. To stream
 your project's logs, you can use *logs tail*.
 
-    $ modulus project logs tail
+    $ xervo project logs tail
 
-##Status
+## Status
 
-The *status* command allows you to view the status of Modulus as set on
-status.modulus.io.
+The *status* command allows you to view the status of Xervo as set on
+status.xervo.io.
 
-    $ modulus status
+    $ xervo status
 
-##License
+## License
 
-Copyright (c) Modulus
+Copyright (c) Xervo
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -258,3 +258,5 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[npm]: https://www.npmjs.com/package/@xervo/cli

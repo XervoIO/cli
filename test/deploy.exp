@@ -11,5 +11,5 @@ expect {
 }
 
 expect {
-  "onmodulus.net" {send "\r"}
+  "app.xervo.io" {send "\r"}
 }
