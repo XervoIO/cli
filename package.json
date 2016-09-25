@@ -44,7 +44,7 @@
     "prompt": "1.0.0",
     "request": "2.27.x",
     "semver": "^5.1.0",
-    "split": "0.3.0",
+    "split": "1.0.0",
     "text-table": "0.2.0",
     "through": "2.3.4",
     "underscore": "1.4.x",
