@@ -36,7 +36,6 @@
     "colors": "1.1.2",
     "commander-plus": "0.0.6",
     "find-file-sync": "0.0.4",
-    "fs-tools": "0.2.10",
     "fstream-ignore": "1.0.5",
     "node-uuid": "1.4.7",
     "opener": "1.4.2",
