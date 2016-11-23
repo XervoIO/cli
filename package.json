@@ -37,7 +37,6 @@
     "commander-plus": "0.0.6",
     "find-file-sync": "0.0.4",
     "fstream-ignore": "1.0.5",
-    "node-uuid": "1.4.7",
     "opener": "1.4.2",
     "progress": "1.1.8",
     "prompt": "1.0.0",
@@ -48,6 +47,7 @@
     "through": "2.3.8",
     "underscore": "1.8.3",
     "update-notifier": "1.0.2",
+    "uuid": "^3.0.0",
     "zip-stream": "1.1.0"
   },
   "devDependencies": {
