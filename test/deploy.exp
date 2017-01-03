@@ -2,14 +2,14 @@
 
 set timeout 300
 
-set MODULUS ../bin/modulus
+set CLI ../bin/xervo
 
-spawn $MODULUS deploy [lindex $argv 0]
+spawn $CLI deploy [lindex $argv 0]
 
 expect {
   "yes" {send "\r"}
 }
 
 expect {
-  "onmodulus.net" {send "\r"}
+  "app.xervo.io" {send "\r"}
 }

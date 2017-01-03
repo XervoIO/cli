@@ -1,8 +1,11 @@
 .git/
 .modulus-base-ignore
+.xervo-base-ignore
 .modulusignore
+.xervoignore
 .meteor/local/
 modulus-auto-zip-*
+xervo-auto-zip-*
 __MACOSX/
 .DS_Store
 .nvmrc

@@ -2,11 +2,11 @@
 
 set timeout 300
 
-set MODULUS ../bin/modulus
-set USERNAME brandon@modulus.io
+set CLI ../bin/xervo
+set USERNAME test@xervo.io
 set PASSWORD qwerty
 
-spawn $MODULUS login
+spawn $CLI login
 
 expect {
   "email:" {send "$USERNAME\r"}
@@ -17,5 +17,5 @@ expect {
 }
 
 expect {
-  "brandon@modulus.io" {send "\r"}
+  "test@xervo.io" {send "\r"}
 }

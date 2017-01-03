@@ -1,8 +1,8 @@
 {
-  "name": "modulus-demo-app",
+  "name": "xervo-demo-app",
   "private" : true,
   "version": "0.0.1",
-  "description": "Demo application for showing off Modulus.",
+  "description": "Demo application for showing off Xervo.",
   "dependencies" : {
     "express" : "2.5.x",
     "ejs" : "0.8.x"
