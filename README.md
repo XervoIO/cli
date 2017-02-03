@@ -29,18 +29,13 @@ sure your message is enclosed in double quotes (eg. “Your message”).
 
 ## Account Related Commands
 
-To start, you may need an account. Using the *signup* command, you can quickly
-create an account to get things rolling. It will prompt you for a few required
-pieces of information then set up an account.
-
-    $ xervo signup
-
-Once you have an account, you need to log in. Running the *login* command will
-prompt you for your Xervo credentials or if you have linked your GitHub
-account in the web portal (under account settings) you can use the *--github*
-flag to login using your GitHub credentials. This keeps a session open so you
-can run commands under your account and the session will not be closed unless
-you run the *logout* command or log in with a different account.
+To start, you may need an account, [sign up](https://my.xervo.io/register) on 
+the website. Once you have an account, you need to log in. Running the *login* 
+command will prompt you for your Xervo credentials or if you have linked your 
+GitHub account in the web portal (under account settings) you can use the 
+*--github* flag to login using your GitHub credentials. This keeps a session 
+open so you can run commands under your account and the session will not be 
+closed unless you run the *logout* command or log in with a different account.
 
     $ xervo login
 
