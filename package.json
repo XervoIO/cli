@@ -52,7 +52,8 @@
   },
   "devDependencies": {
     "code": "~1.5.0",
-    "lab": "~6.2.0"
+    "lab": "~6.2.0",
+    "standard": "~8.6.0"
   },
   "main": "./lib/xervo",
   "bin": {
