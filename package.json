@@ -64,6 +64,13 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "lab"
-  }
+    "lint": "standard -v",
+    "unit": "lab",
+    "test": "npm run lint && npm run unit"
+  },
+  "standard": {
+    "ignore": [
+      "/test/"
+    ]
+  }	      
 }
