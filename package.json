@@ -52,7 +52,8 @@
   },
   "devDependencies": {
     "code": "~1.5.0",
-    "lab": "~6.2.0"
+    "lab": "~6.2.0",
+    "standard": "~8.6.0"
   },
   "main": "./lib/xervo",
   "bin": {
@@ -63,6 +64,13 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "lab"
-  }
+    "lint": "standard -v",
+    "unit": "lab",
+    "test": "npm run lint && npm run unit"
+  },
+  "standard": {
+    "ignore": [
+      "/test/"
+    ]
+  }	      
 }
