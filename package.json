@@ -15,7 +15,7 @@
     "xervoio",
     "modulusio"
   ],
-  "version": "7.0.0",
+  "version": "7.0.1",
   "author": "Xervo <info@xervo.io>",
   "maintainers": [
     "Jack Boberg <jack@hellotangible.com>",
@@ -72,5 +72,5 @@
     "ignore": [
       "/test/"
     ]
-  }	      
+  }
 }
