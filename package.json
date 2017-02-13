@@ -32,6 +32,7 @@
     }
   ],
   "dependencies": {
+    "@xervo/api-util": "^0.2.0",
     "async": "2.1.1",
     "colors": "1.1.2",
     "commander-plus": "0.0.6",

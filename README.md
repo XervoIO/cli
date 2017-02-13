@@ -200,6 +200,16 @@ user create* command to create a database user.
 
     $ xervo mongo user create
 
+To migrate a databse to a different DB version or host, you can use the *mongo migrate* command
+
+    $ xervo mongo migrate
+
+You can optionally pass in the name as well
+
+    $ xervo mongo migrate "Lizard Locator DB"
+
+The database will be re-created on the new host with the same username and password.
+
 ## Add-Ons Management
 
 After logging in, you can set up add-ons for your project. To add an add-on to a
